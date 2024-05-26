@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert ,ImageBackground} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 
 
@@ -55,6 +55,8 @@ export default function DailyTarget({ onTargetSet }) {
 
   return (
     <View style={styles.card}>
+
+   
       <View style={styles.cardContent}>
         <View style={styles.leftContent}>
            {dailyTarget === 0 &&
@@ -84,7 +86,7 @@ export default function DailyTarget({ onTargetSet }) {
         </View>
         <Ionicons name="water" size={120} color="#3EBDF4" style={styles.iconStyle} />
       </View>
-      
+
     </View>
   );
 }

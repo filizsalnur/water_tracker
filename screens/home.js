@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from "react";
-import { View, Text, StyleSheet, Touchable, TouchableOpacity,TouchableWithoutFeedback, Keyboard } from "react-native";
+import { View, Text, StyleSheet, Touchable, TouchableOpacity,TouchableWithoutFeedback, Keyboard,ImageBackground } from "react-native";
 import globalStyles from "../styles/global";
 import { MaterialIcons } from '@expo/vector-icons';
 import WaterDrop from "../components/waterDrop";
@@ -55,9 +55,17 @@ const handleConsumedSet=(consumed)=>{
 
        <View style={styles.circleContainer}>
         <View style={styles.circle}>
-           <WaterDrop targetAmount={usersDailyTarget.toString()} drinkedWaterAmount={drinkedWaterAmount} />
+           <ImageBackground source={require('../assets/wave.gif')} style={{width: 300, height: 300, justifyContent: 'center', alignItems: 'center'}}>
+            <Text style={styles.textStyle}>Daily Water</Text>
+            <Text style={styles.textStyle}>{drinkedWaterAmount}/{usersDailyTarget.toString()}</Text>
+            </ImageBackground>
         </View>
       </View>
+      {/* <View style={styles.circleContainer}>
+        <View style={styles.circle}>
+           <WaterDrop targetAmount={usersDailyTarget.toString()} drinkedWaterAmount={drinkedWaterAmount} />
+        </View>
+      </View> */}
       <View>        
          <AddWater handleConsumedSet={handleConsumedSet}/>
       </View> 
@@ -78,9 +86,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   textStyle: {
-    marginTop: 5,
+    marginTop: 0,
     textAlign: 'center',
-    fontSize: 15,
+    fontSize: 30,
+    fontWeight: 'bold',
     color: "#244A84"
   },
   infoContainer: {
@@ -89,7 +98,7 @@ const styles = StyleSheet.create({
   },
   circleContainer: {
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 10,
   },
   circle: {
     width: 300,

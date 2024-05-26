@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, TextInput,Alert ,TouchableWithoutFeedback, Keyboard} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, TextInput,Alert ,TouchableWithoutFeedback, Keyboard,ImageBackground} from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
  
@@ -121,10 +121,12 @@ export default function AddWater({handleConsumedSet}) {
 
   return ( 
        <View> 
+     
         <View style={styles.addWaterContainer}>
-          <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold', marginTop: 10 }}>Add a portion of water</Text>
-          <MaterialCommunityIcons name="water-plus" size={40} color="white" />
+          <Text style={{ color: 'blue', fontSize: 20, fontWeight: 'bold' }}>Add a portion of water</Text>
+          <MaterialCommunityIcons name="water-plus" size={40} color="blue" />
         </View>
+       
         <View style={styles.buttonsAligner}>      
           <TouchableOpacity style={[styles.cupButton, { flexDirection: 'row', alignItems: 'center' }]}>  
             <MaterialCommunityIcons name="cup-water" size={25} color="white" />
