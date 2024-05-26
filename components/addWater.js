@@ -113,6 +113,7 @@ export default function AddWater({handleConsumedSet}) {
     await postConsumedWater();
     setCustomAmount(0);
     setToggleCustomInput(false);
+    
 
   }
   };

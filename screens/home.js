@@ -40,15 +40,14 @@ const handleConsumedSet=(consumed)=>{
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
     <View style={globalStyles.container}>
       <Text style={styles.header}>Today</Text>
-
       
       <View style={styles.infoContainer}>
-        <MaterialIcons
+        {/* <MaterialIcons
           name="info"
           size={20}
           color="#244A84"
           style={{ marginRight: 8, marginTop: 2 }}
-        />
+        /> */}
         <DailyTarget onTargetSet={handleTargetSet} />
         
       </View>
@@ -73,8 +72,8 @@ const handleConsumedSet=(consumed)=>{
 const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
-    margin: 20,
-    color: 'white',
+    marginTop: 10,
+    color: '#244A84',
     fontSize: 23,
     fontWeight: 'bold'
   },

@@ -30,7 +30,7 @@ export default function MyTabs() {
     <Tab.Navigator
     screenOptions={{
       tabBarStyle:{
-        backgroundColor:"#27303D"
+        backgroundColor:"white",
     
       }
     }}
